@@ -6,6 +6,23 @@ info:
 http:
   method: GET
   url: "{{baseUrl}}/organization"
+  params:
+    - name: search
+      value: Achme
+      type: query
+      disabled: true
+    - name: take
+      value: "10"
+      type: query
+      disabled: true
+    - name: skip
+      value: "0"
+      type: query
+      disabled: true
+    - name: perPage
+      value: "15"
+      type: query
+      disabled: true
   auth: inherit
 
 settings:

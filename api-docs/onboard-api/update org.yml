@@ -1,0 +1,27 @@
+info:
+  name: update org
+  type: http
+  seq: 1
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/organization/edit/a0d26ba3-2776-4135-b88a-66dea0c44426"
+  body:
+    type: form-urlencoded
+    data:
+      - name: name
+        value: Elpitiya Plantations PLC
+        disabled: true
+      - name: no_of_users
+        value: "25"
+        disabled: true
+      - name: no_of_admins
+        value: "5"
+        disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
