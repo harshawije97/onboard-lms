@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\PostCourseRequest;
 use App\Models\Course;
-use App\Models\Organization;
 use Illuminate\Http\JsonResponse;
 
 class CourseController extends Controller
@@ -12,25 +11,26 @@ class CourseController extends Controller
     public function createCourse(PostCourseRequest $postCourseRequest): JsonResponse
     {
         // Validate name
-        $validated = $postCourseRequest->validated();
-
-        // check if the organization is a valid one
-        $organization = Organization::find($validated['org_id']);
-        if ($organization == null) {
-            return response()->json([
-                'status' => 404,
-                'message' => 'Invalid organization'
-            ], 404);
-        }
-
+        $validatedData = $postCourseRequest->validated();
         // Save the course
-        $course = Course::create($validated);
-        
+        $course = Course::create($validatedData);
+
         return response()->json([
-            'status' => 200,
+            'status' => 201,
             'message' => 'Course created successfully',
             'data' => $course
-        ], 200);
+        ], 201);
 
+    }
+
+    public function getCourse(string $id)
+    {
+        //TODO::Check if the user has the authorization to get the course information
+        $course = Course::findOrFail($id);
+        return response()->json([
+            'status' => 200,
+            'message' => 'Course fetched',
+            'data' => $course
+        ], 200);
     }
 }

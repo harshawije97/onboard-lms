@@ -22,7 +22,7 @@ class PostCourseRequest extends FormRequest
             'thumbnail_url' => ['required', 'url:https'],
             'learning_outcome' => ['required', 'string'],
             'created_by' => ['required', 'string', 'max:100'],
-            'org_id' => ['required', 'string']
+            'org_id' => ['required', Rule::exists('organizations', 'id')]
         ];
     }
 }

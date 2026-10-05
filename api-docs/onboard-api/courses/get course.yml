@@ -1,0 +1,15 @@
+info:
+  name: get course
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{baseUrl}}/course/get/01a10db1-1f36-73ad-acc5-e46cea85610c"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
