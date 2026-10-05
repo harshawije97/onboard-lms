@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/organization"
+  url: "{{baseUrl}}/organization?take=10&skip=0"
   params:
     - name: search
       value: Achme
@@ -14,11 +14,9 @@ http:
     - name: take
       value: "10"
       type: query
-      disabled: true
     - name: skip
       value: "0"
       type: query
-      disabled: true
     - name: perPage
       value: "15"
       type: query

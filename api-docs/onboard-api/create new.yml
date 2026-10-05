@@ -1,24 +1,30 @@
 info:
   name: create new
   type: http
-  seq: 1
+  seq: 4
 
 http:
   method: POST
-  url: "{{baseUrl}}/organization/create"
+  url: "{{baseUrl}}/course/create"
   body:
     type: form-urlencoded
     data:
       - name: name
-        value: Browns Tea
+        value: Introduction of Cinnamon
+      - name: course_type
+        value: Regular
       - name: short_description
-        value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque vestibulum justo at elementum. Sed finibus neque dapibus elit dictum bibendum. Phasellus sit amet diam sed felis viverra aliquam vitae nec nisl
-      - name: description
-        value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque vestibulum justo at elementum. Sed finibus neque dapibus elit dictum bibendum. Phasellus sit amet diam sed felis viverra aliquam vitae nec nisl. Sed ac odio a lacus tincidunt fringilla pulvinar eget tortor. Nullam condimentum feugiat luctus. Nam ac libero accumsan.
-      - name: no_of_users
-        value: "100"
-      - name: no_of_admins
-        value: "50"
+        value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper cursus neque, et finibus purus ultricies vel. Donec justo sem, dignissim eu elit in, vehicula.
+      - name: user_level
+        value: beginner
+      - name: thumbnail_url
+        value: https://res.cloudinary.com/demo/image/upload/v1699000000/courses/laravel-basics-thumbnail.jpg
+      - name: learning_outcome
+        value: consectetur adipiscing elit. Vestibulum ullamcorper cursus neque, et finibus purus ultricies vel. Donec justo sem, dignissim eu elit in, vehicula.
+      - name: created_by
+        value: Harshana Wijesinghe
+      - name: org_id
+        value: a0d26ba3-2776-4135-b88a-66dea0c44426
   auth: inherit
 
 settings:

@@ -16,5 +16,5 @@ Route::patch('/organization/edit/{id}', [OrganizationController::class, 'updateO
 
 // Creating a course
 Route::prefix('/course')->group(function () {
-    Route::post('/create', [CourseController::class, 'createOrganization'])->name('create-course');
+    Route::post('/create', [CourseController::class, 'createCourse'])->name('create-course');
 });

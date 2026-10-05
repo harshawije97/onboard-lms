@@ -1,0 +1,28 @@
+info:
+  name: create new
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/organization/create"
+  body:
+    type: form-urlencoded
+    data:
+      - name: name
+        value: Browns Tea
+      - name: short_description
+        value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque vestibulum justo at elementum. Sed finibus neque dapibus elit dictum bibendum. Phasellus sit amet diam sed felis viverra aliquam vitae nec nisl
+      - name: description
+        value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque vestibulum justo at elementum. Sed finibus neque dapibus elit dictum bibendum. Phasellus sit amet diam sed felis viverra aliquam vitae nec nisl. Sed ac odio a lacus tincidunt fringilla pulvinar eget tortor. Nullam condimentum feugiat luctus. Nam ac libero accumsan.
+      - name: no_of_users
+        value: "100"
+      - name: no_of_admins
+        value: "50"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
