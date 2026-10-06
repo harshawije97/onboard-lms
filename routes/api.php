@@ -21,4 +21,7 @@ Route::prefix('/course')->group(function () {
     Route::prefix('/content')->group(function () {
         Route::post('/create', [CourseController::class, 'createCourseContent'])->name('create-course-content');
     });
+    Route::prefix('/media-content')->group(function () {
+        Route::post('/create', [CourseController::class, 'createCourseMediaContent'])->name('create-media-content');
+    });
 });

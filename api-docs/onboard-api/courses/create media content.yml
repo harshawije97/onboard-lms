@@ -1,0 +1,105 @@
+info:
+  name: create media content
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{baseUrl}}/course/media-content/create"
+  body:
+    type: form-urlencoded
+    data:
+      - name: title
+        value: Introduction to Cinnamon
+      - name: media_type
+        value: documents
+      - name: content
+        value: |-
+          # INTRODUCTION
+
+          ## HISTORY OF CINNAMON IN SRI LANKA
+
+          The history of cinnamon dates back as far as 1400 B.C., with the first reference to Ceylon cinnamon found in the late tenth-century book “Aja’ib al-Hind” by Burzug ibn Shahriyar.
+
+          Portuguese historian Diogo do Couto noted that during the reign of the Great Parakramabahu, King of Sri Lanka (1236 – 1270 A.D.), the island was already renowned for its fine quality and abundance of cinnamon.
+
+          The Dutch initiated the systematic cultivation of cinnamon in Sri Lanka, which until then had been harvested from the wild. Between 1765 and 1785, Dutch governor Iman Willem Falck began experimental cultivation in Colombo. These efforts debunked the belief that cinnamon could not be commercially cultivated, leading subsequent rulers, including the English, to expand commercial cinnamon plantations.
+
+          By 1799, British Governor Frederick North had secured prime cinnamon lands in Colombo and Negombo. By 1850, Sri Lanka boasted approximately 40,000 acres of cinnamon plantations.
+
+          Despite this early success, the Ceylon cinnamon industry received minimal government support before and after Sri Lanka’s independence. Initially managed under the Department of Minor Export Crops, it later fell under the Department of Export Agriculture, which provided research and development (R&D) support for cinnamon.
+
+          The National Cinnamon Research and Training Centre was subsequently established in Thihagoda, Matara, with extension and development services offered through the district offices of the Department of Export Agriculture.
+
+          By 2022, under government support, the cinnamon industry had grown significantly, with Sri Lanka exporting 18,300 metric tons of cinnamon products worth 71,716 million Rs from 36,506 hectares of land.
+
+          Recognizing the great importance and high potential of cinnamon, akin to Sri Lanka’s major export crops, the government established the Department of Cinnamon Development in 2023. This new authority governs all aspects of cinnamon industry research, development, administration, and legal matters, with a long-term and sustainable vision to grow the cinnamon industry in collaboration with other stakeholders.
+
+          ---
+
+          ## ENVIRONMENTAL FACTORS
+
+          ### Cinnamon Plant Production and Field Management
+
+          Cinnamon is an evergreen, perennial, tropical hardwood tree. Under natural conditions, it can grow over 20 meters tall. However, in commercial cultivation, it is frequently harvested and maintained as a bush of 2.5 to 3 meters with several stems from the base.
+
+          ### Temperature
+
+          - Cinnamon thrives at temperatures between **25°C and 35°C**.
+          - It can be cultivated in rainfed areas where annual rainfall exceeds **1875 mm**.
+          - In areas with less rainfall, cinnamon can still be grown with sufficient irrigation.
+
+          ### Elevation
+
+          - Cinnamon can be commercially cultivated up to an elevation of **700 meters above mean sea level**.
+          - Beyond this elevation, the plant may become weak.
+
+          ### Humidity
+
+          - The optimum relative humidity for cinnamon is **75% to 85%**.
+          - However, cinnamon can be managed by inducing microclimatic conditions even in dry areas with lower humidity.
+
+          ### Soil
+
+          The wet zone of Sri Lanka, with its red soil, is primarily used for cinnamon cultivation.
+
+          These red soils, found on undulating land systems, are more acidic and belong to the red-yellow podzolic soil group in local classification.
+
+          The sandy or sandy loam soils found in the plains and along the coast are also suitable for cinnamon cultivation.
+
+          Some areas of the dry zone have soil groups capable of supporting cinnamon cultivation with appropriate management methods.
+
+          ### Unsuitable Lands for Cinnamon Cultivation
+
+          Land that is less than **1 meter deep** or suffers from any of the following conditions is not suitable for commercial cinnamon cultivation:
+
+          - Stoniness
+          - Poor drainage
+          - Water table fluctuation
+          - Waterlogging
+          - Salinity
+
+          Additionally, land with a **slope greater than 60%** is not advisable for cultivation of cinnamon.
+      - name: min_completion_time
+        value: "120"
+      - name: course_id
+        value: 01a10db1-1f36-73ad-acc5-e46cea85610c
+      - name: meta_data
+        value: |-
+          {
+            "title": "Introduction to Cinnamon",
+            "document_type": "markdown",
+            "subject": "Cinnamon Cultivation in Sri Lanka",
+            "module_group": "Cinnamon",
+            "country": "Sri Lanka",
+            "sections": 2,
+            "document_pages": 3,
+            "source_file": "CIN-Introduction.pdf"
+          }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
