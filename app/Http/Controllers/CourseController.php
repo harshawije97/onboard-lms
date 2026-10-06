@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\PostCourseRequest;
 use App\Models\Course;
+use App\Models\CourseContent;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 
 class CourseController extends Controller
 {
@@ -31,6 +33,24 @@ class CourseController extends Controller
             'status' => 200,
             'message' => 'Course fetched',
             'data' => $course
+        ], 200);
+    }
+
+    public function createCourseContent(Request $request)
+    {
+        // validate the request
+        $validated = $request->validate([
+            'total_hours' => ['required', 'integer'],
+            'content_info' => ['required', 'string'],
+            'course_id' => ['required', 'string', 'exists:courses,id']
+        ]);
+        // save the course content
+        $courseContent = CourseContent::create($validated);
+        // return the response in json
+        return response()->json([
+            'status' => 200,
+            'message' => 'Course content created successfully!',
+            'data' => $courseContent
         ], 200);
     }
 }

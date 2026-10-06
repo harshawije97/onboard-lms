@@ -1,0 +1,271 @@
+info:
+  name: create new content base
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{baseUrl}}/course/content/create"
+  body:
+    type: form-urlencoded
+    data:
+      - name: content_info
+        value: |-
+          {
+            "course_title": "Generative AI From Zero to Hero",
+            "modules": [
+              {
+                "module_title": "Module 1: Foundations of Generative AI",
+                "videos": [
+                  {
+                    "video_title": "Welcome and Course Overview",
+                    "video_hours": 0.5
+                  },
+                  {
+                    "video_title": "What is Generative AI? Core Concepts",
+                    "video_hours": 1.2
+                  },
+                  {
+                    "video_title": "History and Evolution of Generative Models",
+                    "video_hours": 1.0
+                  },
+                  {
+                    "video_title": "Understanding Neural Networks Basics",
+                    "video_hours": 1.5
+                  }
+                ],
+                "reading_materials": [
+                  {
+                    "reading_title": "Introduction to Artificial Intelligence - Chapter 1",
+                    "reading_hours": 1.0
+                  },
+                  {
+                    "reading_title": "Generative Models Overview - Research Paper",
+                    "reading_hours": 1.5
+                  }
+                ],
+                "exams_quizzes": [
+                  {
+                    "exam_title": "Module 1 Quiz: Generative AI Fundamentals",
+                    "exam_completion_hours": 0.5
+                  }
+                ],
+                "external_reading_links": [
+                  {
+                    "link_title": "OpenAI GPT-4 Technical Report",
+                    "url": "https://arxiv.org/abs/2303.08774",
+                    "estimated_hours": 2.0
+                  },
+                  {
+                    "link_title": "Google DeepMind Generative AI Course Materials",
+                    "url": "https://www.deepmind.google/",
+                    "estimated_hours": 1.5
+                  }
+                ]
+              },
+              {
+                "module_title": "Module 2: Large Language Models (LLMs)",
+                "videos": [
+                  {
+                    "video_title": "Introduction to Transformers Architecture",
+                    "video_hours": 2.0
+                  },
+                  {
+                    "video_title": "Attention Mechanism Explained",
+                    "video_hours": 1.8
+                  },
+                  {
+                    "video_title": "Training Large Language Models",
+                    "video_hours": 2.5
+                  },
+                  {
+                    "video_title": "Fine-tuning vs Prompt Engineering",
+                    "video_hours": 1.5
+                  },
+                  {
+                    "video_title": "Hands-on: Building Your First LLM Application",
+                    "video_hours": 2.0
+                  }
+                ],
+                "reading_materials": [
+                  {
+                    "reading_title": "Attention Is All You Need - Original Paper",
+                    "reading_hours": 2.5
+                  },
+                  {
+                    "reading_title": "LLM Fine-tuning Best Practices Guide",
+                    "reading_hours": 1.5
+                  },
+                  {
+                    "reading_title": "Prompt Engineering Handbook",
+                    "reading_hours": 2.0
+                  }
+                ],
+                "exams_quizzes": [
+                  {
+                    "exam_title": "Module 2 Mid-Course Exam: LLM Architecture",
+                    "exam_completion_hours": 1.0
+                  },
+                  {
+                    "exam_title": "Transformers Quiz",
+                    "exam_completion_hours": 0.5
+                  }
+                ],
+                "external_reading_links": [
+                  {
+                    "link_title": "Hugging Face Transformers Documentation",
+                    "url": "https://huggingface.co/docs/transformers",
+                    "estimated_hours": 3.0
+                  },
+                  {
+                    "link_title": "Stanford CS224n: NLP with Deep Learning",
+                    "url": "https://web.stanford.edu/class/cs224n/",
+                    "estimated_hours": 4.0
+                  },
+                  {
+                    "link_title": "The Illustrated Transformer by Jay Alammar",
+                    "url": "https://jalammar.github.io/illustrated-transformer/",
+                    "estimated_hours": 1.0
+                  }
+                ]
+              },
+              {
+                "module_title": "Module 3: Image Generation and Diffusion Models",
+                "videos": [
+                  {
+                    "video_title": "Introduction to Diffusion Models",
+                    "video_hours": 1.8
+                  },
+                  {
+                    "video_title": "Stable Diffusion Architecture Deep Dive",
+                    "video_hours": 2.2
+                  },
+                  {
+                    "video_title": "Hands-on: Generating Images with Stable Diffusion",
+                    "video_hours": 2.0
+                  },
+                  {
+                    "video_title": "ControlNet and Advanced Techniques",
+                    "video_hours": 1.5
+                  }
+                ],
+                "reading_materials": [
+                  {
+                    "reading_title": "Diffusion Models Beat GANs on Image Synthesis - Paper",
+                    "reading_hours": 2.5
+                  },
+                  {
+                    "reading_title": "Stable Diffusion: Latent Diffusion Models Explained",
+                    "reading_hours": 2.0
+                  }
+                ],
+                "exams_quizzes": [
+                  {
+                    "exam_title": "Module 3 Quiz: Diffusion Models",
+                    "exam_completion_hours": 0.75
+                  }
+                ],
+                "external_reading_links": [
+                  {
+                    "link_title": "Stable Diffusion GitHub Repository",
+                    "url": "https://github.com/CompVis/stable-diffusion",
+                    "estimated_hours": 1.5
+                  },
+                  {
+                    "link_title": "Hugging Face Diffusers Library",
+                    "url": "https://huggingface.co/docs/diffusers",
+                    "estimated_hours": 2.0
+                  }
+                ]
+              },
+              {
+                "module_title": "Module 4: Building Real-World Applications",
+                "videos": [
+                  {
+                    "video_title": "RAG (Retrieval Augmented Generation) Systems",
+                    "video_hours": 2.0
+                  },
+                  {
+                    "video_title": "Vector Databases and Embeddings",
+                    "video_hours": 1.5
+                  },
+                  {
+                    "video_title": "Building Chatbots with Memory",
+                    "video_hours": 2.5
+                  },
+                  {
+                    "video_title": "Deployment and Production Best Practices",
+                    "video_hours": 1.8
+                  },
+                  {
+                    "video_title": "Capstone Project: End-to-End GenAI Application",
+                    "video_hours": 3.0
+                  }
+                ],
+                "reading_materials": [
+                  {
+                    "reading_title": "RAG Survey Paper: Retrieval-Augmented Generation for Knowledge-Intensive NLP",
+                    "reading_hours": 2.0
+                  },
+                  {
+                    "reading_title": "Vector Database Comparison Guide",
+                    "reading_hours": 1.5
+                  },
+                  {
+                    "reading_title": "MLOps for Generative AI - Best Practices",
+                    "reading_hours": 2.0
+                  }
+                ],
+                "exams_quizzes": [
+                  {
+                    "exam_title": "Final Capstone Project Assessment",
+                    "exam_completion_hours": 2.0
+                  },
+                  {
+                    "exam_title": "Course Completion Exam: Generative AI Mastery",
+                    "exam_completion_hours": 1.5
+                  }
+                ],
+                "external_reading_links": [
+                  {
+                    "link_title": "LangChain Documentation",
+                    "url": "https://python.langchain.com/docs",
+                    "estimated_hours": 3.0
+                  },
+                  {
+                    "link_title": "Pinecone Vector Database Learning Center",
+                    "url": "https://www.pinecone.io/learn/",
+                    "estimated_hours": 2.5
+                  },
+                  {
+                    "link_title": "OpenAI API Documentation",
+                    "url": "https://platform.openai.com/docs",
+                    "estimated_hours": 2.0
+                  },
+                  {
+                    "link_title": "Anthropic Claude API Documentation",
+                    "url": "https://docs.anthropic.com/",
+                    "estimated_hours": 1.5
+                  }
+                ]
+              }
+            ],
+            "course_summary": {
+              "total_video_hours": 24.8,
+              "total_reading_hours": 20.5,
+              "total_exam_hours": 6.25,
+              "total_external_reading_hours": 24.0,
+              "estimated_total_course_hours": 75.55
+            }
+          }
+      - name: total_hours
+        value: "120"
+      - name: course_id
+        value: 01a10db1-1f36-73ad-acc5-e46cea85610c
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
